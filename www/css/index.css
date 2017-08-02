@@ -6,16 +6,20 @@ top: 2px;
 }
 
 .topicsTable {
-width: 100%;
+width: 70%;
 border-collapse: collapse;
+margin: auto;
 }
 
 .topicsTable tr {
 cursor: pointer;
 }
+.topicsTable tr:nth-child(even) {
+background-color: #d6d6c2;
+}
 
 .topicsTable tr:hover {
-background-color: rgba(255, 200,55, 0.50);
+background-color: #cce6ff;
 
 }
 .topicsTable th {
@@ -23,8 +27,46 @@ background-color: rgba(255, 200,55, 0.50);
 font-size: 1.4rem;
 
 }
-.topicsTable th, .topicsTable td {
+.topicsTable th {
 border: 2px solid black;
 
-padding: 8px 16px;
+padding: 15px;
+    text-align: left;
+	background-color: #ff9966;
+
+}
+.topicsTable td {
+border: 2px solid black;
+padding: 15px;
+    text-align: left;
+}
+
+.postTable {
+width: 70%;
+border-collapse: collapse;
+margin: auto;
+}
+
+.postTable tr:nth-child(even) {
+background-color: #d6d6c2;
+}
+
+.postTable tr:hover {
+background-color: #cce6ff;
+
+}
+.postTable th {
+
+font-size: 1.4rem;
+background-color: #ff9966;
+}
+.postTable th{
+border: 2px solid black;
+padding: 15px;
+    text-align: left;
+}
+.postTable td {
+border: 2px solid black;
+padding: 15px;
+    text-align: left;
 }

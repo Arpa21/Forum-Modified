@@ -56,6 +56,11 @@ var topics = [
 },
 {title: "Other Topics", posts:7}
 ];
+var userPosts = [
+{subject: "Why does restaring computer fixes everything?", author: "John Doe"
+},
+{subject: "Whi is university so stressful?", author: "Jane Doe"}
+];
 
 function showLogInPage() {
 
@@ -90,7 +95,12 @@ $("#maincontent").html(page);
 }
 function createTopicOnClick(node, topic) {
 node.on("click", function() {
-showSingleTopic(topic);
+showPosts(topic);
+});
+}
+function createPostOnClick(node, post) {
+node.on("click", function() {
+showSinglePost(post);
 });
 }
 function showForumTopics() {
@@ -113,13 +123,32 @@ $("#maincontent").html(page);
 
 }
 
-function showSingleTopic(topicDetails) {
-alert(topicDetails.title);
+function showPosts() {
+var page = $("<div></div>");
+page.append("<h1>Posts</h1>");
+
+var postTable = $("<table class='postTable'><tr><th>Title</th><th>Posts</th></tr></table>");
+
+for (index in userPosts) {
+var row = $("<tr></tr>");
+row.append("<td>" + userPosts[index].subject + "</td>");
+row.append("<td>" + userPosts[index].author + "</td>");
+createPostOnClick(row, userPosts[index]);
+postTable.append(row);
+}
+
+page.append(postTable);
+
+$("#maincontent").html(page);
+}
+function showSinglePost(postDetails) {
+alert(postDetails.subject);
 }
 $( document ).ready(function() {
 $("#loginButton").on("click", showLogInPage);
 $("#registerButton").on("click", showRegistrationPage);
 
 showForumTopics();
+showPosts();
 });
 
