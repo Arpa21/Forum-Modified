@@ -1,0 +1,30 @@
+.uppermenu {
+position: absolute;
+right: 10px;
+top: 2px;
+
+}
+
+.topicsTable {
+width: 100%;
+border-collapse: collapse;
+}
+
+.topicsTable tr {
+cursor: pointer;
+}
+
+.topicsTable tr:hover {
+background-color: rgba(255, 200,55, 0.50);
+
+}
+.topicsTable th {
+
+font-size: 1.4rem;
+
+}
+.topicsTable th, .topicsTable td {
+border: 2px solid black;
+
+padding: 8px 16px;
+}
