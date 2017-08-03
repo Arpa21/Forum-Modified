@@ -72,6 +72,11 @@ var username = $("<input type='text'></input>");
 var usernameLine = $("<p>Username: </p>");
 usernameLine.append(username);
 page.append(usernameLine);
+var password = $("<input type='password'></input>");
+
+var passwordLine = $("<p>Password: </p>");
+passwordLine.append(password);
+page.append(passwordLine);
 
 var loginButton = $("<button>LogIn</button>");
 page.append(loginButton);
@@ -86,13 +91,41 @@ $("#maincontent").html(page);
 }
 
 function showRegistrationPage() {
+
+
+
 var page = $("<div></div>");
 page.append("<h1>Registration Page</h1>");
+
+var username = $("<input type='text'></input>");
+
+var usernameLine = $("<p>Username: </p>");
+usernameLine.append(username);
+page.append(usernameLine);
+var email = $("<input type='email'></input>");
+
+var emailLine = $("<p>Email: </p>");
+emailLine.append(email);
+page.append(emailLine);
+var password = $("<input type='password'></input>");
+
+var passwordLine = $("<p>Create Password: </p>");
+passwordLine.append(password);
+page.append(passwordLine);
+
+
+var registerButton = $("<button>Register</button>");
+page.append(registerButton);
+registerButton.on("click", function() {
+showForumTopics();
+});
+
 
 $("#maincontent").html(page);
 
 
 }
+
 function createTopicOnClick(node, topic) {
 node.on("click", function() {
 showPosts(topic);
@@ -150,5 +183,8 @@ $("#registerButton").on("click", showRegistrationPage);
 
 showForumTopics();
 showPosts();
+$("#about").click(function(){
+        $("#info").slideToggle("slow");
+    });
 });
 

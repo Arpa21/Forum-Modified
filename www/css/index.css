@@ -1,3 +1,9 @@
+body {
+font-family: helvetica;
+font-size: 22px;
+color: white;
+}
+
 .uppermenu {
 position: absolute;
 right: 10px;
@@ -9,6 +15,7 @@ top: 2px;
 width: 70%;
 border-collapse: collapse;
 margin: auto;
+
 }
 
 .topicsTable tr {
@@ -25,6 +32,7 @@ background-color: #cce6ff;
 .topicsTable th {
 
 font-size: 1.4rem;
+color: black
 
 }
 .topicsTable th {
@@ -39,6 +47,7 @@ padding: 15px;
 border: 2px solid black;
 padding: 15px;
     text-align: left;
+	color: black
 }
 
 .postTable {
@@ -59,6 +68,7 @@ background-color: #cce6ff;
 
 font-size: 1.4rem;
 background-color: #ff9966;
+color: black
 }
 .postTable th{
 border: 2px solid black;
@@ -69,4 +79,23 @@ padding: 15px;
 border: 2px solid black;
 padding: 15px;
     text-align: left;
+	color: black
+}
+
+#about, #info {
+    padding: 6px;
+    text-align: center;
+    background-color: #009933;
+    border: dashed 2px black;
+	
+	width: 60%;
+	margin: auto;
+	font-size: 30px;
+	
+	
+}
+
+#info {
+    
+    display: none;
 }
