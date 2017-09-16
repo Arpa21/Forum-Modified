@@ -16,6 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  https://www.youtube.com/watch?v=Jc_Yycz7MEc
+ for hashing password - http://coursesweb.net/javascript/sha256-encrypt-hash_cs
  */
 var app = {
     // Application Constructor
