@@ -15,6 +15,7 @@
  * KIND, either express or implied.  See the License for the
  * specific language governing permissions and limitations
  * under the License.
+ https://www.youtube.com/watch?v=Jc_Yycz7MEc
  */
 var app = {
     // Application Constructor
@@ -67,12 +68,12 @@ function showLogInPage() {
 var page = $("<div></div>");
 page.append("<h1>Login Page</h1>");
 
-var username = $("<input type='text'></input>");
+var username = $("<input type='text' id='textfield'></input>");
 
 var usernameLine = $("<p>Username: </p>");
 usernameLine.append(username);
 page.append(usernameLine);
-var password = $("<input type='password'></input>");
+var password = $("<input type='password' id='passfield'></input>");
 
 var passwordLine = $("<p>Password: </p>");
 passwordLine.append(password);
@@ -80,10 +81,14 @@ page.append(passwordLine);
 
 var loginButton = $("<button>LogIn</button>");
 page.append(loginButton);
-loginButton.on("click", function() {
-showForumTopics();
-});
 
+
+/*loginButton.on("click", function() {
+showForumTopics();
+});*/
+loginButton.on("click", function() {
+save();
+});
 
 $("#maincontent").html(page);
 
@@ -167,6 +172,7 @@ var row = $("<tr></tr>");
 row.append("<td>" + userPosts[index].subject + "</td>");
 row.append("<td>" + userPosts[index].author + "</td>");
 createPostOnClick(row, userPosts[index]);
+
 postTable.append(row);
 }
 
@@ -175,14 +181,51 @@ page.append(postTable);
 $("#maincontent").html(page);
 }
 function showSinglePost(postDetails) {
-alert(postDetails.subject);
+var text;
+var ab = confirm("Want to send a reply?");
+if (ab == true) {
+    text = prompt("Express your thought.");
+} else {
+    text = "You selected Cancel!";
 }
+}
+function save() {
+var fieldValue = document.getElementById('textfield').value;
+localStorage.setItem('textfield', fieldValue);
+var passValue = document.getElementById('passfield').value;
+
+localStorage.setItem('passfield', passValue);
+}
+function load() {
+var storedValue = localStorage.getItem('textfield');
+if(storedValue) {
+document.getElementById('textfield').value = storedValue;
+}
+var passStored = localStorage.getItem('passfield');
+if(passStored) {
+document.getElementById('passfield').value = passStored;
+}
+
+}
+/*function init() {
+if (localStorage.firstName){
+document.getElementById("mytxt").value = localStorage.firstName;
+}
+}
+
+function onSavePressed(){
+localStorage.firstName = document.getElementById("mytxt").value;
+}*/
+
 $( document ).ready(function() {
 $("#loginButton").on("click", showLogInPage);
 $("#registerButton").on("click", showRegistrationPage);
 
-showForumTopics();
+
 showPosts();
+showForumTopics();
+showLogInPage();
+
 $("#about").click(function(){
         $("#info").slideToggle("slow");
     });

@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <!--
     Licensed to the Apache Software Foundation (ASF) under one
@@ -39,29 +40,36 @@
 		<!--
 		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 		-->
+
 		<script type="text/javascript" src="js/jquery-2.0.0.js"></script>
 		<script type="text/javascript" src="js/sugar.js"></script>
 		
+		
 		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 		<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+		
 		<script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
 		
     </head>
-    <body>
+    <body onload="load()">
        
 	<h1>Arpa's Forum</h1>	
 	<p class="uppermenu">
 	<input type="text" placeholder="search">
 	<button id="loginButton">LogIn</button>
 	<button id="registerButton">Register</button>
-<div id="about">About</div>
-<div id="info">This app is a forum of different discussion topics. Feel free to explore!</div>
+	<div id="about">About</div>
+	<div id="info">This app is a forum of different discussion topics. Feel free to explore!</div>
 
-	
-	</p>
+
 	<input type="text" data-role="data" data-inline="true">
+	
 	<div id='maincontent'></div> <!--could be single quote-->
+	<div class="footer"><p>Visit our Facebook page<p><br>
+	<a href="#"><img src="facebook.png"></a>
 
     </body>
 </html>

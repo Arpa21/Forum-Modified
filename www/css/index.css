@@ -2,6 +2,7 @@ body {
 font-family: helvetica;
 font-size: 22px;
 color: white;
+
 }
 
 .uppermenu {
@@ -83,7 +84,7 @@ padding: 15px;
 }
 
 #about, #info {
-    padding: 6px;
+    padding: 3px;
     text-align: center;
     background-color: #009933;
     border: dashed 2px black;
@@ -99,3 +100,22 @@ padding: 15px;
     
     display: none;
 }
+
+
+.blue {
+width: 20%;
+}
+.yellow {
+width: 20%;
+}
+/* This idea to keep footer at the bottom is from a user Chris Bracco at https://codepen.io/cbracco/pen/zekgx */ 
+.footer {
+  position: absolute;
+  
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+  }
