@@ -1,5 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.arpa.forum" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+
+
     <name>Forum</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -11,17 +13,50 @@
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
-    <allow-intent href="tel:*" />
+   
+ <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-    <platform name="android">
-        <allow-intent href="market:*" />
-    </platform>
-    <platform name="ios">
-        <allow-intent href="itms:*" />
+    
+
+<platform name="android">
+        
+
+<allow-intent href="market:*" />
+        
+
+<icon density="hdpi" src="res/icon/android/drawable-hdpi/icon.png" />
+        
+<icon density="mdpi" src="res/icon/android/drawable-mdpi/icon.png" />
+        
+<icon density="Idpi" src="res/icon/android/drawable-Idpi/icon.png" />
+        
+<icon density="xhdpi" src="res/icon/android/drawable-xhdpi/icon.png" />
+    
+
+
+    <splash src="res/screen/android/drawable-land-hdpi/screen.png" density="land-hdpi"/>
+    <splash src="res/screen/android/drawable-land-Idpi/screen.png" density="land-ldpi"/>
+    <splash src="res/screen/android/drawable-land-mdpi/screen.png" density="land-mdpi"/>
+    <splash src="res/screen/android/drawable-land-xhdpi/screen.png" density="land-xhdpi"/>
+
+    <splash src="res/screen/android/drawable-hdpi/screen.png" density="port-hdpi"/>
+    <splash src="res/screen/android/drawable-Idpi/screen.png" density="port-ldpi"/>
+    <splash src="res/screen/android/drawable-mdpi/screen.png" density="port-mdpi"/>
+    <splash src="res/screen/android/drawable-xhdpi/screen.png" density="port-xhdpi"/>
+
+    <preference name = "SplashScreenDelay" value = "3000" />
+
+</platform>
+    
+
+<platform name="ios">
+        
+<allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
     <engine name="android" spec="^6.2.3" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
+    <plugin name="cordova-plugin-splashscreen" spec="^4.0.3" />
 </widget>
