@@ -84,12 +84,16 @@ var loginButton = $("<button id='cryptstr'>LogIn</button>");
 page.append(loginButton);
 
 
-/*loginButton.on("click", function() {
-showForumTopics();
-});*/
 loginButton.on("click", function() {
 save();
 showForumTopics();
+});
+
+var createAccountButton = $("<button id='create'>Create Account</button>");
+page.append(createAccountButton);
+
+createAccountButton.on("click", function() {
+showRegistrationPage();
 });
 
 $("#maincontent").html(page);

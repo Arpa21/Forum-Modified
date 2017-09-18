@@ -5,10 +5,14 @@ color: white;
 
 }
 
+h1 {
+text-align: center;
+}
+
 .uppermenu {
 position: absolute;
 right: 10px;
-top: 2px;
+top: 40px;
 
 }
 
@@ -55,6 +59,7 @@ padding: 15px;
 width: 70%;
 border-collapse: collapse;
 margin: auto;
+
 }
 
 .postTable tr:nth-child(even) {
@@ -96,6 +101,10 @@ padding: 15px;
 	
 }
 
+#about {
+margin-top: 60px;
+}
+
 #info {
     
     display: none;
@@ -119,3 +128,13 @@ width: 20%;
   background-color: #efefef;
   text-align: center;
   }
+  
+#create {
+margin-left: 10px;
+} 
+  
+  
+  
+  
+  
+  
