@@ -89,6 +89,7 @@ showForumTopics();
 });*/
 loginButton.on("click", function() {
 save();
+showForumTopics();
 });
 
 $("#maincontent").html(page);
