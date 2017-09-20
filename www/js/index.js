@@ -94,6 +94,7 @@ page.append(createAccountButton);
 
 createAccountButton.on("click", function() {
 showRegistrationPage();
+
 });
 
 $("#maincontent").html(page);
@@ -128,7 +129,8 @@ page.append(passwordLine);
 var registerButton = $("<button>Register</button>");
 page.append(registerButton);
 registerButton.on("click", function() {
-showForumTopics();
+
+confirmEmail();
 });
 
 
@@ -194,6 +196,10 @@ if (ab == true) {
 } else {
     text = "You selected Cancel!";
 }
+}
+
+function confirmEmail() {
+alert("Please confirm your email to activate your account");
 }
 // code for SHA256 starts
 
@@ -347,7 +353,95 @@ function onSavePressed(){
 localStorage.firstName = document.getElementById("mytxt").value;
 }*/
 
+//create a global variable for the URL
+window.baseUrl = "http://introtoapps.com/datastore.php?appid=215141369";
+window.currentUsername = null;
+window.forumTopics = [];
+
+/*function displayForumPage() {
+	for (var index = 0; index < forumTopics.length; index++) {
+	var topic = forumTopics[index];
+	$("body").append("<p>" + topic.subject + " / " + topic.author + "</p>");
+	
+	}
+	
+	var newTopic = {
+	subject: "data typed by user",
+	author: window.currentUsername;
+	}
+}*/
+
+function loadForumTopics() {
+var url = baseUrl + "&action=load&objectid=forumtopics";
+	
+	
+	$.ajax({
+	url: url,
+	cache: false
+	})
+	.done(function( data ) {
+	
+	/*try {
+	window.forumTopics = JSON.parse(data);
+	displayForumPage();
+	} catch (e) {
+	alert(e);
+	}*/
+	}).fail(function( jqXHR, textStatus ) {
+		alert( "Request failed: " + textStatus );
+	});
+
+}
+
+function createUser(username, password) {
+	var userObject = {
+		username : username,
+		password : password,
+	};
+
+	var data = JSON.stringify(userObject);
+	alert("Data to be saved: " + data);
+	//create a url for saving
+	var url = baseUrl + "&action=save&objectid=" + encodeURIComponent(username) + ".user&data=" + encodeURIComponent(data);
+	alert("URL: "+url);
+	
+	$.ajax({
+	url: url,
+	cache: false
+	})
+	.done(function( data ) {
+	//when successfully complete, run this function
+	alert("Result from server: " + data);
+	}).fail(function( jqXHR, textStatus ) {
+		alert( "Request failed: " + textStatus );
+	});
+
+}
+
+
+function loadUser (username) {
+var url = baseUrl + "&action=load&objectid=" + encodeURIComponent(username) + ".user";
+console.log(url);
+
+$.ajax({
+	url: url,
+	cache: false
+	})
+	.done(function( data ) {
+
+	$( "body" ).append( data );
+	}).fail(function( jqXHR, textStatus ) {
+		alert( "Request failed: " + textStatus );
+	});
+
+}
+
+
+
+
+
 $( document ).ready(function() {
+
 $("#loginButton").on("click", showLogInPage);
 $("#registerButton").on("click", showRegistrationPage);
 
@@ -355,7 +449,10 @@ $("#registerButton").on("click", showRegistrationPage);
 showPosts();
 showForumTopics();
 showLogInPage();
+console.log("My app starting (v1.2)...");
+loadForumTopics();
 
+//createUser("bob", "bobs password");
 $("#about").click(function(){
         $("#info").slideToggle("slow");
     });
