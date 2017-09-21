@@ -15,8 +15,8 @@
  * KIND, either express or implied.  See the License for the
  * specific language governing permissions and limitations
  * under the License.
- https://www.youtube.com/watch?v=Jc_Yycz7MEc
- for hashing password - http://coursesweb.net/javascript/sha256-encrypt-hash_cs
+ 
+ 
  */
 var app = {
     // Application Constructor
@@ -104,16 +104,7 @@ createAccountButton.on("click", function() {
 showRegistrationPage();
 
 });
-var createPost = $("<button id='cpost'>Create Post</button>");
-page.append(createPost);
 
-
-createPost.on("click", function() {
-
-
-newPost();
-
-});
 
 
 $("#maincontent").html(page);
@@ -189,20 +180,7 @@ $("#maincontent").html(page);
 
 }
 
-function newPost() {
-var page = $("<div></div>");
-page.append("<h1>New Post</h1>");
 
-//var topicTable = $("<table class='topicsTable'><tr><th>Title</th><th>Posts</th></tr></table>");
-
-
-
-//page.append(topicTable);
-
-
-$("#maincontent").html(page);
-
-}
 
 function showPosts() {
 var page = $("<div></div>");
@@ -238,7 +216,7 @@ if (ab == true) {
 function confirmEmail() {
 alert("Please confirm your email to activate your account");
 }
-// code for SHA256 starts
+// the code snippet for SHA256 has been taken from http://coursesweb.net/javascript/sha256-encrypt-hash_cs
 
 function SHA256(s){
   var chrsz   = 8;
@@ -360,6 +338,8 @@ function SHA256(s){
 //code for sha256 ends
 
 
+
+//the concept of localstorage has been inspired by a user named olimpsys https://www.youtube.com/watch?v=Jc_Yycz7MEc
 function save() {
 var fieldValue = document.getElementById('textfield').value;
 localStorage.setItem('textfield', fieldValue);
@@ -380,6 +360,9 @@ document.getElementById('passfield').value = passStored;
 }
 
 }
+
+
+
 /*function init() {
 if (localStorage.firstName){
 document.getElementById("mytxt").value = localStorage.firstName;
@@ -474,20 +457,20 @@ $.ajax({
 }
 
 
+
 $( document ).ready(function() {
 
 $("#loginButton").on("click", showLogInPage);
 $("#registerButton").on("click", showRegistrationPage);
 
-/* */
-/*var p = document.getElementById('your_paragraph');
+
+var p = document.getElementById('paragraph');
 var btn = document.getElementById('btn');
 var txt = document.getElementById('theText');
 btn.onclick = function(){
     p.textContent = txt.value;
-};*/
-  
-/* */
+};
+      
 
 showPosts();
 showForumTopics();

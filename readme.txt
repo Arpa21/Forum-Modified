@@ -1,5 +1,9 @@
 *** This is a Forum app ***
 
-Github link: https://github.com/Arpa21/Forum
+Github link: https://github.com/Arpa21/Forum-Modified
 
-The facebook icon is created by Xinh Studio and found at https://www.iconfinder.com/icons/287801/facebook_icon
+
+Name: Arpa Barua Sumi
+SID: 215141369
+Unit Code: SIT313
+

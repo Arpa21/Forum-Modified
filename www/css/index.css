@@ -1,47 +1,49 @@
 body {
-font-family: helvetica;
-font-size: 22px;
-color: white;
-background-color: #d6d6c2;
+	font-family: helvetica;
+	font-size: 22px;
+	color: white;
+	background-color: #d6d6c2;
+
 }
 
 h1 {
-text-align: center;
+	text-align: center;
 }
 
 .uppermenu {
-position: absolute;
-right: 10px;
-top: 40px;
+	position: absolute;
+	right: 10px;
+	top: 40px;
 
 }
 
 .topicsTable {
-width: 70%;
-border-collapse: collapse;
-margin: auto;
+	width: 40%;
+	border-collapse: collapse;
+	margin-left: 5px;
+
 
 }
 
 .topicsTable tr {
-cursor: pointer;
+	cursor: pointer;
 }
 .topicsTable tr:nth-child(even) {
-background-color: #d6d6c2;
+	background-color: #d6d6c2;
 }
 
 .topicsTable tr:hover {
-background-color: #cce6ff;
+	background-color: #cce6ff;
 
 }
 .topicsTable th {
 
-font-size: 1.4rem;
-color: black
+	font-size: 1.4rem;
+	color: black
 
 }
 .topicsTable th {
-border: 2px solid black;
+	border: 2px solid black;
 
 padding: 15px;
     text-align: left;
@@ -49,41 +51,42 @@ padding: 15px;
 
 }
 .topicsTable td {
-border: 2px solid black;
-padding: 15px;
+	border: 2px solid black;
+	padding: 15px;
     text-align: left;
 	color: black
 }
 
 .postTable {
-width: 70%;
-border-collapse: collapse;
-margin: auto;
+	width: 40%;
+	border-collapse: collapse;
+
+	margin-left: 5px;
 
 }
 
 .postTable tr:nth-child(even) {
-background-color: #d6d6c2;
+	background-color: #d6d6c2;
 }
 
 .postTable tr:hover {
-background-color: #cce6ff;
+	background-color: #cce6ff;
 
 }
 .postTable th {
 
-font-size: 1.4rem;
-background-color: #ff9966;
-color: black
+	font-size: 1.4rem;
+	background-color: #ff9966;
+	color: black
 }
 .postTable th{
-border: 2px solid black;
-padding: 15px;
+	border: 2px solid black;
+	padding: 15px;
     text-align: left;
 }
 .postTable td {
-border: 2px solid black;
-padding: 15px;
+	border: 2px solid black;
+	padding: 15px;
     text-align: left;
 	color: black
 }
@@ -102,7 +105,7 @@ padding: 15px;
 }
 
 #about {
-margin-top: 60px;
+	margin-top: 100px;
 }
 
 #info {
@@ -112,30 +115,42 @@ margin-top: 60px;
 
 
 .blue {
-width: 20%;
+	width: 20%;
 }
 .yellow {
-width: 20%;
+	width: 20%;
 }
 /* This idea to keep footer at the bottom is from a user Chris Bracco at https://codepen.io/cbracco/pen/zekgx */ 
 .footer {
-  position: absolute;
+	position: absolute;
   
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 0.5rem;
-  background-color: #efefef;
-  text-align: center;
-  }
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 0.5rem;
+	background-color: #efefef;
+	text-align: center;
+  
+  
+}
   
 #create {
-margin-left: 10px;
+	margin-left: 10px;
 } 
-  
- #mySidenav a {
+ 
+#feedback {
+    top: 250px;
+	right: 2px;
+	font-size: 15px;
+	width: 190px;
+	position: absolute;
+}
+
+
+#theSidenav a {
     position: absolute;
-    left: -110px; /* this will position the menus outside of the screen */
+	
+    left: -110px; /* this will position the menu outside of the screen */
     transition: 0.3s; /* this adds transition on hover */
     padding: 15px; 
     width: 100px; 
@@ -145,13 +160,21 @@ margin-left: 10px;
     border-radius: 0 10px 10px 0;
 }
 
-#mySidenav a:hover {
+#theSidenav a:hover {
     left: 0; /* by mouse-over, this will make the elements appear */
 }
 
 
 #facebook {
-    top: -400px;
+    top: -500px;
     background-color: #002266;
 }
-/*from here */
+
+#btn {
+	margin-bottom: 20px;
+	font-size: 15px;
+}
+	
+#paragraph {
+	color: #4741f4;
+}

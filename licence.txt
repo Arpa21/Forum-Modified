@@ -1,7 +1,7 @@
-The facebook icon is created by Xinh Studio and found at https://www.iconfinder.com/icons/287801/facebook_icon
+The facebook icon for footer for project 1 is created by Xinh Studio and found at https://www.iconfinder.com/icons/287801/facebook_icon
 
-icon: http://www.freeiconspng.com/img/24920
+The icon is taken from http://www.freeiconspng.com/img/24920 and it's author is Ahkâm.
 
-splach screen: http://www.freeiconspng.com/img/35905
+The splach screen is taken from http://www.freeiconspng.com/img/35905 and it's author is Ahkâm.
 
-heart image: https://pixabay.com/p-26790/?no_redirect
+The heart image for footer is taken from: https://pixabay.com/p-26790/?no_redirect

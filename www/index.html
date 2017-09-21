@@ -61,9 +61,11 @@
 	<h1>Arpa's Forum</h1>
 	
 	<p class="uppermenu">
-	<input type="text" placeholder="search">
-	<!--<button id="loginButton">LogIn</button>
-	<button id="registerButton">Register</button>-->
+		<input type="text" placeholder="search">
+		<!--<button id="loginButton">LogIn</button>-->
+		<button id="registerButton">Register</button>
+	</p>
+	
 	<div id="about">About</div>
 	<div id="info">This app is a forum of different discussion topics. Feel free to explore!</div>
 
@@ -71,21 +73,25 @@
 	<!--<input type="text" data-role="data" data-inline="true">-->
 	
 	<div id='maincontent'></div> <!--could be single quote-->
-	<!--<p id="your_paragraph">This text will change, after clicking the button.</p>
-Main News: <input type="text" id="theText" />
-<input type="button" id="btn" value="Update" />-->
+	
+	<!-- The idea of updating a text field is taken from https://stackoverflow.com/a/23138552 by a user named Alex W -->
+	<div id="feedback"><p>Your Feedback:</p><p id="paragraph">.......</p>
+		We welcome your feedback. You can also edit and replace your previous feedback: <textarea id="theText"></textarea>
+		<input type="button" id="btn" value="Update" /></div>
+	<!-- end Alex's idea-->
 	<br>
-	 <a href="post.html" rel="external" >Create your post</a>
-	<div class="footer"><p>Made with <img src="heart.png"> by Arpa Barua<p><br>
+	<a href="post.html" rel="external" >Create your post</a>
+	 
+	<div class="footer"><p>Made with <img src="heart.png"> by Arpa Barua<p>
 	
 	
-	<div id="mySidenav" class="sidenav">
+	<div id="theSidenav" class="sidenav">
 	
 
   
-  <a href="https://www.facebook.com/" id="facebook">Find us on Facebook</a>
+		<a href="https://www.facebook.com/" id="facebook">Find us on Facebook</a>
   
-</div>
+	</div>
 
     </body>
 </html>

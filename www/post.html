@@ -2,30 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Summernote</title>
+  <title>Post</title>
   <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> 
   <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> 
   <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css" rel="stylesheet">
   <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.js"></script>
 </head>
-<body>
+<body style="background-color:#999966;">
 <!-- this summernote api is taken from https://summernote.org/getting-started/#installation -->
-  <div id="summernote"><p>Hello Summernote</p></div>
+  <div id="summernote"><p>Hello,</p></div>
   <br>
-  <button id="postMe">Post</button>
+  <button id="postMe" onMouseOver="this.style.backgroundColor='#66b3ff'" onMouseOut="this.style.backgroundColor='#248f8f'" style="padding:10px; width:200px; margin-left: 10px; font-size: 20px;">Post</button>
   <script>
   $("#postMe").on("click", function() {
 
-confirmation();
+	confirmation();
 });
 
 function confirmation(){
-alert("You have successfully created a post.");
+	alert("You have successfully created a post.");
 }
-    $(document).ready(function() {
-        $('#summernote').summernote();
-    });
+
+$(document).ready(function() {
+    $('#summernote').summernote({
+		height: 400
+	});
+});
   </script>
 </body>
 </html>
