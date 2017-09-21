@@ -66,14 +66,20 @@ var userPosts = [
 
 function showLogInPage() {
 
+
+
 var page = $("<div></div>");
 page.append("<h1>Login Page</h1>");
+
 
 var username = $("<input type='text' id='textfield'></input>");
 
 var usernameLine = $("<p>Username: </p>");
 usernameLine.append(username);
 page.append(usernameLine);
+
+
+
 var password = $("<input type='password' id='passfield'></input>");
 
 var passwordLine = $("<p>Password: </p>");
@@ -85,8 +91,10 @@ page.append(loginButton);
 
 
 loginButton.on("click", function() {
+
 save();
 showForumTopics();
+
 });
 
 var createAccountButton = $("<button id='create'>Create Account</button>");
@@ -96,14 +104,25 @@ createAccountButton.on("click", function() {
 showRegistrationPage();
 
 });
+var createPost = $("<button id='cpost'>Create Post</button>");
+page.append(createPost);
+
+
+createPost.on("click", function() {
+
+
+newPost();
+
+});
+
 
 $("#maincontent").html(page);
 
 
 }
 
-function showRegistrationPage() {
 
+function showRegistrationPage() {
 
 
 var page = $("<div></div>");
@@ -165,6 +184,22 @@ topicTable.append(row);
 
 page.append(topicTable);
 
+
+$("#maincontent").html(page);
+
+}
+
+function newPost() {
+var page = $("<div></div>");
+page.append("<h1>New Post</h1>");
+
+//var topicTable = $("<table class='topicsTable'><tr><th>Title</th><th>Posts</th></tr></table>");
+
+
+
+//page.append(topicTable);
+
+
 $("#maincontent").html(page);
 
 }
@@ -185,6 +220,8 @@ postTable.append(row);
 }
 
 page.append(postTable);
+
+
 
 $("#maincontent").html(page);
 }
@@ -437,19 +474,26 @@ $.ajax({
 }
 
 
-
-
-
 $( document ).ready(function() {
 
 $("#loginButton").on("click", showLogInPage);
 $("#registerButton").on("click", showRegistrationPage);
 
+/* */
+/*var p = document.getElementById('your_paragraph');
+var btn = document.getElementById('btn');
+var txt = document.getElementById('theText');
+btn.onclick = function(){
+    p.textContent = txt.value;
+};*/
+  
+/* */
 
 showPosts();
 showForumTopics();
 showLogInPage();
 console.log("My app starting (v1.2)...");
+
 loadForumTopics();
 
 //createUser("bob", "bobs password");

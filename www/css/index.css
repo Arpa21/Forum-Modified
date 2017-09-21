@@ -124,7 +124,7 @@ width: 20%;
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 1rem;
+  padding: 0.5rem;
   background-color: #efefef;
   text-align: center;
   }
@@ -133,8 +133,25 @@ width: 20%;
 margin-left: 10px;
 } 
   
-  
-  
-  
-  
-  
+ #mySidenav a {
+    position: absolute;
+    left: -110px; /* this will position the menus outside of the screen */
+    transition: 0.3s; /* this adds transition on hover */
+    padding: 15px; 
+    width: 100px; 
+    text-decoration: none; 
+    font-size: 15px;
+    color: white; 
+    border-radius: 0 10px 10px 0;
+}
+
+#mySidenav a:hover {
+    left: 0; /* by mouse-over, this will make the elements appear */
+}
+
+
+#facebook {
+    top: -400px;
+    background-color: #002266;
+}
+/*from here */
